@@ -13,7 +13,7 @@ end
 
 
 def artist_name=(name)
-       self.artist = Artist.new(name)
+       self.artist.name = Artist.new(name)
 
 end
 
