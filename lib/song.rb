@@ -12,8 +12,9 @@ new_artist.add_song(self)
 end
 
 
-def artist_name=(namee)
-       self.artist.name = Artist.new(namee)
+def artist_name=(name)
+       self.artist = Artist.new(name)
+       self.artist.name
 
 end
 
