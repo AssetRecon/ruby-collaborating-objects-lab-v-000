@@ -9,7 +9,7 @@ end
 
   def artist=(name)
 new_artist = Artist.find_or_create_by_name(name)
-binding.pry
+#binding.pry
 new_artist.add_song(self)
 @artist = name
 end
