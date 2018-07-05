@@ -4,6 +4,7 @@ class Artist
 attr_accessor :name, :songs
 
 @@all = []
+@@all_names = []
 
 def initialize(name)
   @name = name
@@ -18,11 +19,12 @@ end
 
 
 def self.all#
-  @@all.uniq
+  @@all
 end
 
 def save#
   @@all << self
+  @@all_names << self.name
 end
 
 
