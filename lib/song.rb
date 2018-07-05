@@ -24,11 +24,7 @@ def self.new_by_filename(filename)
 song_name = filename.split("-")[1].strip
 art_name = filename.split("-")[0].strip
 new_song = Song.new(song_name)
-if Artist.all_names.include?(art_name)
-  Artist.all[0].songs << new_song
-else
 new_song.artist_name = art_name
-end
 new_song
 
 end
