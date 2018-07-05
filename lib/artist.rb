@@ -22,6 +22,10 @@ def self.all#
   @@all
 end
 
+def self.all_names
+  @@all_names
+end
+
 def save#
   @@all << self
   @@all_names << self.name
