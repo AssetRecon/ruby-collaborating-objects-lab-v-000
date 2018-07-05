@@ -28,9 +28,7 @@ end
 
 def save#
   @@all << self
-  @@all_names << self.name
 end
-
 
   def self.find_or_create_by_name(name)#
     self.find(name) ? self.find(name) : self.create(name)
