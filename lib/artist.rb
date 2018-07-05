@@ -25,26 +25,26 @@ def save#
 end
 
 
-  def self.find_or_create_by_name(name)#
-    self.find(name) ? self.find(name) : self.create(name)
-  end
+#  def self.find_or_create_by_name(name)#
+#    self.find(name) ? self.find(name) : self.create(name)
+#  end
+#
+#  def self.find(name)#
+#    self.all.find {|artist| artist.name == name }
+#  end
+#
+#
+#  def self.create(name)#
+#    self.new(name).tap {|artist| artist.save}
+#  end
 
-  def self.find(name)#
-    self.all.find {|artist| artist.name == name }
-  end
-
-
-  def self.create(name)#
-    self.new(name).tap {|artist| artist.save}
-  end
-
-#def self.find_or_create_by_name(name)
-#  if !@@names.include?(name)
-#  new_artist = Artist.new(name)
-#else
-#  name
-#end
-#end
+def self.find_or_create_by_name(name)
+  if !@@names.include?(name)
+  new_artist = Artist.new(name)
+else
+  name
+end
+end
 
 def print_songs#
 self.songs.each do |song|
